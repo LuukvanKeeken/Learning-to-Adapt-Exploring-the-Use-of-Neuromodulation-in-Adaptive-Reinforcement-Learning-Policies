@@ -1,3 +1,5 @@
+# Learning to Adapt: Exploring the Use of Neuromodulation in Adaptive Reinforcement Learning Policies
+
 This repository includes the code that was used in the Master thesis of Luuk van Keeken, which can be found at ... The code is in part based on the repositories for [Backpropamine](https://github.com/uber-research/backpropamine), [r-STDP](https://github.com/mahmoudakl/dsrl), and [Neural Circuit Policies](https://github.com/mlech26l/ncps).<br><br>
 
 ## Setup
