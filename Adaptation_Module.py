@@ -20,7 +20,6 @@ class StandardRNN(nn.Module):
 
         self.rnn = nn.RNN(input_size, hidden_size)
         self.linear = nn.Linear(hidden_size, output_size)
-        # self.hidden_state = None
 
         if activation_function == "Tanh":
             self.activation = nn.Tanh()

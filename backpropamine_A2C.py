@@ -1,7 +1,6 @@
-import argparse
+
 from copy import deepcopy
-import pdb
-#from line_profiler import LineProfiler
+
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
@@ -11,11 +10,6 @@ import torch.nn.functional as F
 from torch import optim
 from torch.optim import lr_scheduler
 import random
-import sys
-import pickle
-import time
-import os
-import platform
 
 import numpy as np
 
@@ -26,7 +20,6 @@ class BP_RNetwork(nn.Module):
     def __init__(self, isize, hsize, num_actions, seed, external_neuromodulation = False, continuous_actions = False): 
         super(BP_RNetwork, self).__init__()
 
-        # Is all of this really needed?
         random.seed(seed)
         np.random.seed(seed)
         torch.manual_seed(seed)
@@ -132,7 +125,7 @@ class Standard_RNetwork(nn.Module):
     def __init__(self, isize, hsize, num_actions, seed, continuous_actions = False): 
         super(Standard_RNetwork, self).__init__()
 
-        # Is all of this really needed?
+        
         random.seed(seed)
         np.random.seed(seed)
         torch.manual_seed(seed)
@@ -203,7 +196,6 @@ class Standard_FFNetwork(nn.Module):
     def __init__(self, input_size, first_hidden_size, second_hidden_size, num_actions, seed): 
         super(Standard_FFNetwork, self).__init__()
 
-        # Is all of this really needed?
         random.seed(seed)
         np.random.seed(seed)
         torch.manual_seed(seed)

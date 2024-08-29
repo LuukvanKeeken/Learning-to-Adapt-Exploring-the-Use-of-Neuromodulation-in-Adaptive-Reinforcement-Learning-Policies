@@ -10,7 +10,6 @@ class LTC_Network(nn.Module):
     def __init__(self, isize, hsize, num_actions, seed, extract_tau_sys = False, wiring = None):
         super(LTC_Network, self).__init__()
 
-        # Is all of this really needed?
         random.seed(seed)
         np.random.seed(seed)
         torch.manual_seed(seed)
@@ -61,7 +60,6 @@ class CfC_Network(nn.Module):
     def __init__(self, isize, hsize, num_actions, seed, extract_tau_sys = False, mode = "default", wiring = None, continuous_actions = False):#, neuromod_network_dims = None, neuromod_network_activation = nn.Tanh):
         super(CfC_Network, self).__init__()
 
-        # Is all of this really needed?
         random.seed(seed)
         np.random.seed(seed)
         torch.manual_seed(seed)
@@ -69,14 +67,12 @@ class CfC_Network(nn.Module):
         self.continuous_actions = continuous_actions
 
         if not wiring:
-            # self.cfc_model = CfC(isize, hsize, track_tau_system=extract_tau_sys, mode=mode, neuromod_network_dims=neuromod_network_dims, neuromod_network_activation=neuromod_network_activation)
             self.cfc_model = CfC(isize, hsize, track_tau_system=extract_tau_sys, mode=mode, batch_first=False)
             self.h2o = nn.Linear(hsize, num_actions)
             self.h2v = nn.Linear(hsize, 1)
             if continuous_actions:
                 self.h2std = torch.nn.Linear(hsize, num_actions)
         else:
-            # self.cfc_model = CfC(isize, wiring, track_tau_system=extract_tau_sys, mode=mode, neuromod_network_dims=neuromod_network_dims, neuromod_network_activation=neuromod_network_activation)
             self.cfc_model = CfC(isize, wiring, track_tau_system=extract_tau_sys, mode=mode, batch_first=False)
         
         

@@ -11,7 +11,7 @@ This repository includes the code that was used in the Master thesis of Luuk van
 6) Run any script in `learning_to_adapt` as follows: `python -m learning_to_adapt.scripts.example_script_name --example_arg example_arg_value`. <br><br><br>
 
 
-## Scripts overview
+## Overview
 
 ### Training scripts
 - `training_CfC_CartPole.py`: script for training non-ENM Closed-Form Continuous-Time networks and Liquid-Time Constant networks in the CartPole environment.
@@ -30,3 +30,12 @@ This repository includes the code that was used in the Master thesis of Luuk van
 - `get_train_val_test_performance_BW.py`: script for evaluating non-ENM methods over the training, validation, and testing ranges in BipedalWalker.
 - `get_train_val_test_performance_encoder_BW.py`: script for evaluating ENM encoders over the training, validation, and testing ranges in BipedalWalker.
 - `get_train_val_test_performance_adaptmod_BW.py`: script for evaluating ENM adaptation modules over the training, validation, and testing ranges in BipedalWalker.
+
+### Other files
+- `Adaptation_Module.py`: class for an RNN adaptation module.
+- `AdjustableBipedalWalker.py`: a modification of gym's BipedalWalker that allows for setting the values of several environment parameters.
+- `backpropamine_a2c.py`: classes implementing BP networks that can be externally neuromodulated, as well as RNNs and MLPs.
+- `BP_A2C/BP_A2C_agent.py`: code used in training RNN and BP models using Advantage Actor-Critc.
+- `LTC_A2C.py`: classes implementing CfC and LTC networks that can be externally neuromodulated.
+- `modifiable_async_vector_env.py`: adaptation of gym's AsyncVectorEnv, that allows for setting the environment parameter values of individual environments in a vectorised environment.
+- `Neuromodulated_Agent.py`: class that can wrap a policy network and a network providing external neuromodulation.
