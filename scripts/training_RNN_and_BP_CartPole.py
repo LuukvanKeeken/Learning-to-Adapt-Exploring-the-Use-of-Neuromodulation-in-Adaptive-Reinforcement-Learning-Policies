@@ -63,7 +63,7 @@ else:
 
 if result_id == -1:
     # Create Results Directory
-    dirs = os.listdir('learning_to_adapt/results/BP_and_RNN/')
+    dirs = os.listdir('learning_to_adapt/results/BP_A2C/')
     if not any('a2c_result' in d for d in dirs):
         result_id = 1
     else:
@@ -72,7 +72,7 @@ if result_id == -1:
 
 # Get today's date and add it to the results directory
 d = date.today()
-result_dir = f'learning_to_adapt/results/BP_and_RNN/{network_type}_a2c_result_' + str(result_id) + "_{}_entropycoef_{}_valuepredcoef_{}_\
+result_dir = f'learning_to_adapt/results/BP_A2C/{network_type}_a2c_result_' + str(result_id) + "_{}_entropycoef_{}_valuepredcoef_{}_\
 learningrate_{}_numtrainepisodes_{}_selectionmethod_{}_trainingmethod_{}_numneurons_{}".format(
     str(d.year) + str(d.month) + str(d.day), entropy_coef, value_pred_coef,
     learning_rate, num_training_episodes, selection_method, training_method, num_neurons)

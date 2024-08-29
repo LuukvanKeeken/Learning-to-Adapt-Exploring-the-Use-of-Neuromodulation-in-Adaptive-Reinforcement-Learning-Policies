@@ -8,7 +8,7 @@ This repository includes the code that was used in the Master thesis of Luuk van
 3) In the same parent directory, clone [the repository for neuromodulating CfC networks](https://github.com/LuukvanKeeken/neuromodulated_ncps). This is a fork of [the Neural Circuit Policies repository](https://github.com/mlech26l/ncps). The fork also contains some functionality for extracting the values of time-constants.
 4) Install all dependencies present in `requirements.txt`.
 5) Go to the parent directory.
-6) Run any script in `learning_to_adapt` as follows: `python -m learning_to_adapt.example_script_name --example_arg example_arg_value`. <br><br><br>
+6) Run any script in `learning_to_adapt` as follows: `python -m learning_to_adapt.scripts.example_script_name --example_arg example_arg_value`. <br><br><br>
 
 
 ## Scripts overview
