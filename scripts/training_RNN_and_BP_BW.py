@@ -147,9 +147,9 @@ for i_run in range(num_models):
         print(f"Section {section+1} out of {int(num_training_episodes/training_eps_per_section)} sections")
 
         if section == 0:
-            smoothed_scores, scores, best_average, best_average_after, training_total_rewards, training_losses, validation_total_rewards, validation_losses = agent.train_agent_continuous_vectorized_v3(vec_env, training_eps_per_section, section, randomization_params = randomization_params, num_parallel_envs=num_parallel_envs)
+            smoothed_scores, scores, best_average, best_average_after, training_total_rewards, training_losses, validation_total_rewards, validation_losses = agent.train_agent_continuous_vectorized(vec_env, training_eps_per_section, section, randomization_params = randomization_params, num_parallel_envs=num_parallel_envs)
         else:
-            smoothed_scores, scores, best_average, best_average_after, training_total_rewards, training_losses, validation_total_rewards, validation_losses = agent.train_agent_continuous_vectorized_v3(vec_env, training_eps_per_section, section, randomization_params = randomization_params, best_average=best_average_all[i_run], best_average_after=best_average_after_all[i_run], num_parallel_envs=num_parallel_envs)
+            smoothed_scores, scores, best_average, best_average_after, training_total_rewards, training_losses, validation_total_rewards, validation_losses = agent.train_agent_continuous_vectorized(vec_env, training_eps_per_section, section, randomization_params = randomization_params, best_average=best_average_all[i_run], best_average_after=best_average_after_all[i_run], num_parallel_envs=num_parallel_envs)
         
         
         
